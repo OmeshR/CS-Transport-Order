@@ -46,11 +46,14 @@ Add user management features to support multiple operators.
 
 ### Steps to follow
 
-1. Enter the "Passenger name" but please keep an eye on whcih shift is currently active by the title as shown below.
+1. Enter the "Passenger name" but please keep an eye on which shift is currently active by the title as shown below.
 ![image](https://github.com/user-attachments/assets/30f559b1-3cdd-4a23-a538-0890f529f8f3)
 
 2. Check what the current shift is, type in the name of the employee and once the passenger name is added to the relevant shift, press on "Add Passenger" button to add him/her as shown below:
 ![image](https://github.com/user-attachments/assets/d33763b3-5692-495d-ad64-96439d5dc1a6)
+
+3. Clicking on "Next Shift" button will change the shift type to a different one.
+![image](https://github.com/user-attachments/assets/b07876ae-4e75-43f9-b3df-063f4775bd75)
 
 
 
