@@ -32,3 +32,5 @@ File Auto-Open: After generating, the Excel file opens automatically.
 
 Version 7 (GUI Aesthetic Improvements)
 Enhanced Interface: GUI updated with a logo, orange gradient, and polished design.
+
+![image](https://github.com/user-attachments/assets/b1412c42-aaa3-46ed-882d-d9f0c4678db1)
