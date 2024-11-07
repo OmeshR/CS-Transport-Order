@@ -38,7 +38,19 @@ Enhanced Interface: GUI updated with a logo, orange gradient, and polished desig
 Future Improvements
 
 Extend compatibility to additional Excel formats.
+
 Add user management features to support multiple operators.
 
 ![image](https://github.com/user-attachments/assets/92f849c3-a87e-4231-9234-955356a439fc)
+
+
+### Steps to follow
+
+1. Enter the "Passenger name" but please keep an eye on whcih shift is currently active by the title as shown below.
+![image](https://github.com/user-attachments/assets/30f559b1-3cdd-4a23-a538-0890f529f8f3)
+
+2. Check what the current shift is, type in the name of the employee and once the passenger name is added to the relevant shift, press on "Add Passenger" button to add him/her as shown below:
+![image](https://github.com/user-attachments/assets/d33763b3-5692-495d-ad64-96439d5dc1a6)
+
+
 
