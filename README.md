@@ -38,7 +38,8 @@ Extend compatibility to additional Excel formats.
 Add user management features to support multiple operators.
 
 ## User Interface
-![image](https://github.com/user-attachments/assets/92f849c3-a87e-4231-9234-955356a439fc)
+![image](https://github.com/user-attachments/assets/52e37442-497e-4f58-a664-d752364d7b4c)
+
 
 > **💡 **Note**: This is an important reminder to follow the steps always.**
 
