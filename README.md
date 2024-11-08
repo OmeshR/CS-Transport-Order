@@ -70,7 +70,8 @@ Add user management features to support multiple operators.
 ![image](https://github.com/user-attachments/assets/37e5bc13-0a47-412a-8d3f-1a9ecee0ad1c)
 
 
-[!IMPORTANT]
+[!Important]
+
 Based on the passenger's name, the route will be automatically added in front of their name.
 
 If there are two or more passengers with the same route, the program will add them to the same transport.
