@@ -4,7 +4,7 @@ The Transport Order Automation Tool simplifies transport scheduling with a Pytho
 ## Project Overview
 This Python and Tkinter application provides an easy-to-use interface for managing transport orders by filling in a predefined Excel table with passenger names and corresponding routes. The tool minimizes manual input by 89%, reducing human error and making the process repeatable and efficient. This project includes features to handle multiple shifts, store inputted data, clear past entries, and export a printable version.
 
-Features
+## Features
 Version 1.0 (Initial Features)
 Excel Table Integration: Automatically fills out passenger names and routes into designated sections: Morning Pickup, Night Pickup, Mid Shift Drop, and Night Drop.
 GUI for Data Entry: User-friendly interface to add passenger names and their respective routes with navigation buttons to move between shift sections.
@@ -66,7 +66,7 @@ Add user management features to support multiple operators.
 ![image](https://github.com/user-attachments/assets/dae85f35-2a61-4ffe-8c7c-5cd03a9ae63d)
 ![image](https://github.com/user-attachments/assets/a51c2a42-e5b7-4855-b12a-ac577090a259)
 
-9. Use the temporarily created excel sheet to send out the transport order to the cab company. REFER BELOW TO SEE WHAT INFORMATION WIL BE ADDED AUTOMATICALLY.
+9. Use the temporarily created excel sheet to send out the transport order to the cab company. REFER BELOW TO SEE WHAT INFORMATION WILl BE ADDED AUTOMATICALLY.
 ![image](https://github.com/user-attachments/assets/37e5bc13-0a47-412a-8d3f-1a9ecee0ad1c)
 
 
