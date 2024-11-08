@@ -85,7 +85,7 @@ Based on the number of routes, the program will automatically calculate the "No.
 
 The name of the person who made the transport order can be selected before clicking on "Generate" and that will be printed on the table too.
 
-Please keep your internet connection active when using the tool as it is needd to find the correct date.
+Please keep your internet connection active when using the tool as it is needed to find the correct date.
 
 
 
