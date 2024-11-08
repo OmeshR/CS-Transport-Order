@@ -1,7 +1,7 @@
 # CS-Transport-Order
 The Transport Order Automation Tool simplifies transport scheduling with a Python/Tkinter GUI, automating data entry into an Excel sheet by shift and route. 
 
-## ### Project Overview
+### Project Overview
 
 This Python and Tkinter application provides an easy-to-use interface for managing transport orders by filling in a predefined Excel table with passenger names and corresponding routes. The tool minimizes manual input by 89%, reducing human error and making the process repeatable and efficient. This project includes features to handle multiple shifts, store inputted data, clear past entries, and export a printable version.
 
@@ -33,17 +33,17 @@ File Auto-Open: After generating, the Excel file opens automatically.
 Version 7.0 (GUI Aesthetic Improvements)
 Enhanced Interface: GUI updated with a logo, orange gradient, and polished design.
 
-## Future Improvements
+### Future Improvements
 
 Extend compatibility to additional Excel formats.
 
 Add user management features to support multiple operators.
 
-## User Interface
+### User Interface
 ![image](https://github.com/user-attachments/assets/92f849c3-a87e-4231-9234-955356a439fc)
 
 
-### Steps to follow
+## Steps to follow
 
 1. When you first open the desktop app, click on "Clear Data" to remove any previous data entries.
 ![image](https://github.com/user-attachments/assets/dcb0d283-1328-42b0-ad94-33326951ca19)
