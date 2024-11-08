@@ -1,12 +1,11 @@
 import tkinter as tk
 from tkinter import messagebox, ttk
 from openpyxl import load_workbook
-from datetime import datetime
+from datetime import datetime, timedelta
 import requests
 import os
 from PIL import Image, ImageTk
 
-# Load Excel workbooks and worksheets
 script_dir = os.path.dirname(os.path.abspath(__file__))
 uptime_workbook_path = os.path.join(script_dir, "Uptime_Transport.xlsx")
 route_workbook_path = os.path.join(script_dir, "Route.xlsx")
@@ -24,23 +23,22 @@ shift_sections = {
     "Night shift drop": {"start_row": 27, "start_col": 1, "time": "6.30am"},
 }
 
-# Global variables
+
 current_shift = "Morning shift pickup"
 passenger_data = {"Morning shift pickup": [], "Night shift pickup": [], "Mid shift drop": [], "Night shift drop": []}
 
-# Function to get current date from the network
 def get_network_date():
     try:
         response = requests.get("http://worldtimeapi.org/api/timezone/Etc/UTC")
         if response.status_code == 200:
             network_date = datetime.fromisoformat(response.json()["datetime"]).date()
-            return network_date
+            return network_date + timedelta(days=1)  # Get tomorrow's date
         else:
-            return datetime.now().date()
+            return datetime.now().date() + timedelta(days=1)
     except:
-        return datetime.now().date()
+        return datetime.now().date() + timedelta(days=1)
 
-# Function to find the route based on name from Route.xlsx
+
 def get_route_from_name(name):
     for row in range(2, route_sheet.max_row + 1):
         route_name = route_sheet.cell(row=row, column=1).value
@@ -48,20 +46,17 @@ def get_route_from_name(name):
             return route_sheet.cell(row=row, column=2).value
     return None
 
-# Function to add passenger with automated route retrieval
 def add_passenger():
     name = name_entry.get()
     if not name:
         messagebox.showwarning("Input Required", "Please enter Passenger Name.")
         return
 
-    # Retrieve route from Route.xlsx based on name
     route = get_route_from_name(name)
     if not route:
         messagebox.showwarning("Route Not Found", "No route found for this name in Route.xlsx.")
         return
 
-    # Add passenger to current shift data with the retrieved route
     existing_route = False
     for i, (existing_route_name, passengers) in enumerate(passenger_data[current_shift]):
         if existing_route_name == route:
@@ -72,8 +67,7 @@ def add_passenger():
     if not existing_route:
         passenger_data[current_shift].append([route, [name]])
 
-    # If adding to "Night shift pickup", also add the same passenger to "Night shift drop"
-    if current_shift == "Night shift pickup":
+    if current_shift == "Night shift pickup" and not night_drop_var.get():
         night_drop_existing = False
         for i, (night_route, night_passengers) in enumerate(passenger_data["Night shift drop"]):
             if night_route == route:
@@ -85,7 +79,6 @@ def add_passenger():
 
     name_entry.delete(0, tk.END)
 
-# Function to switch to next shift
 def next_shift():
     global current_shift
     shifts = list(shift_sections.keys())
@@ -93,7 +86,6 @@ def next_shift():
     current_shift = shifts[(idx + 1) % len(shifts)]
     shift_label.config(text=f"Current Shift: {current_shift}")
 
-# Function to switch to previous shift
 def previous_shift():
     global current_shift
     shifts = list(shift_sections.keys())
@@ -101,19 +93,20 @@ def previous_shift():
     current_shift = shifts[(idx - 1) % len(shifts)]
     shift_label.config(text=f"Current Shift: {current_shift}")
 
-# Function to clear specific rows from the Excel sheet
 def clear_data():
-    clear_ranges = [(7, 12), (14, 18), (20, 25), (27, 32)]
-    for start_row, end_row in clear_ranges:
+    rows_to_clear = [
+        (7, 12),
+        (14, 18),
+        (20, 25),
+        (27, 32),
+    ]
+    for start_row, end_row in rows_to_clear:
         for row in range(start_row, end_row + 1):
-            for col in range(1, uptime_sheet.max_column + 1):
+            for col in range(1, 9):  # Columns 1 to 8
                 uptime_sheet.cell(row=row, column=col).value = None
-    for row in [1, 2, 3]:
-        uptime_sheet.cell(row=row, column=7, value=None)
     uptime_workbook.save(uptime_workbook_path)
-    messagebox.showinfo("Data Cleared", "Selected entries have been cleared from the table.")
+    messagebox.showinfo("Data Cleared", "Selected rows have been cleared from the table.")
 
-# Function to save data to Excel and open the file
 def save_to_excel():
     today_date = get_network_date()
     uptime_sheet.merge_cells(start_row=1, start_column=7, end_row=1, end_column=8)
@@ -142,53 +135,47 @@ def save_to_excel():
     os.startfile(uptime_workbook_path)
     messagebox.showinfo("Excel Saved", "Data has been saved and the file is opened.")
 
-# Create GUI
+# Tkinter
 root = tk.Tk()
 root.title("Passenger Roster Entry")
-
-# Set background gradient
+root.resizable(False, False)  # Fixed window size
 gradient_canvas = tk.Canvas(root, width=600, height=500)
 gradient_canvas.pack(fill="both", expand=True)
 gradient_canvas.create_rectangle(0, 0, 600, 500, fill="#FFA500", outline="")
 gradient_canvas.create_rectangle(0, 0, 600, 250, fill="#FFD580", outline="")
-
-# Add logo
 logo_path = os.path.join(script_dir, "Uptime logo.png")
 logo_image = Image.open(logo_path)
 resized_logo = logo_image.resize((100, 100), Image.LANCZOS)
 logo = ImageTk.PhotoImage(logo_image)
 logo_label = tk.Label(root, image=logo, bg="#FFD580")
 logo_label.place(x=250, y=10)
-
 shift_label = tk.Label(root, text=f"Current Shift: {current_shift}", font=("Arial", 14), bg="#FFD580")
 shift_label.place(x=50, y=130)
-
 name_label = tk.Label(root, text="Passenger Name:", bg="#FFA500")
 name_label.place(x=50, y=180)
 name_entry = tk.Entry(root, width=30)
 name_entry.place(x=180, y=180)
-
-select_name_label = tk.Label(root, text="Select Name:", bg="#FFA500")
+select_name_label = tk.Label(root, text="CS Name:", bg="#FFA500")
 select_name_label.place(x=50, y=220)
 name_var = tk.StringVar()
 name_dropdown = ttk.Combobox(root, textvariable=name_var, values=["Imesha", "Ashwini", "Omesh"])
 name_dropdown.current(0)
 name_dropdown.place(x=180, y=220)
+night_drop_var = tk.BooleanVar()
+night_drop_checkbox = tk.Checkbutton(root, text="Don't need night shift drop", variable=night_drop_var, bg="#FFA500")
+night_drop_checkbox.place(x=180, y=250, width=200)  # Adding width for spacing
 
-# Buttons
+
 add_button = tk.Button(root, text="Add Passenger", command=add_passenger)
-add_button.place(x=50, y=270)
-
+add_button.place(x=50, y=280)
 next_button = tk.Button(root, text="Next Shift", command=next_shift)
-next_button.place(x=180, y=270)
-
+next_button.place(x=180, y=280)
 prev_button = tk.Button(root, text="Previous Shift", command=previous_shift)
-prev_button.place(x=290, y=270)
-
-generate_button = tk.Button(root, text="Generate", command=save_to_excel)
-generate_button.place(x=50, y=330)
-
+prev_button.place(x=280, y=280)
+save_button = tk.Button(root, text="Save to Excel", command=save_to_excel)
+save_button.place(x=50, y=330)
 clear_button = tk.Button(root, text="Clear Data", command=clear_data)
 clear_button.place(x=180, y=330)
+
 
 root.mainloop()
