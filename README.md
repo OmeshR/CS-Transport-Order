@@ -40,6 +40,7 @@ Add user management features to support multiple operators.
 ## User Interface
 ![image](https://github.com/user-attachments/assets/92f849c3-a87e-4231-9234-955356a439fc)
 
+> **💡 **Note**: This is an important reminder to follow the steps always.**
 
 ## Steps to follow
 1. When you first open the desktop app, click on "Clear Data" to remove any previous data entries.
