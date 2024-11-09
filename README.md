@@ -8,6 +8,18 @@ This Python and Tkinter application provides an easy-to-use interface for managi
 ![image](https://github.com/user-attachments/assets/35ce59f7-066d-40ab-a955-36625fc30ce3)
 
 ## 🚀 How to Install
+1. When you're in the main page of the Github Repository, click on "Transportify version 11.7z" as shown below.
+![image](https://github.com/user-attachments/assets/f05765eb-362f-4584-9573-12f80f587810)
+
+2. When you're inside the webpage, click on the 3 dots on the far right hand side.
+![image](https://github.com/user-attachments/assets/7e94d365-037b-488c-82e9-ef1c6dd6584c)
+
+3. Then click on "Download" button that shows up on the drop down menu.
+![image](https://github.com/user-attachments/assets/c0528436-58bc-4bf4-848d-7b5506f3130d)
+
+4. 
+
+
 
 
 
