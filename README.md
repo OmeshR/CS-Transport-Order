@@ -40,10 +40,10 @@ This Python and Tkinter application provides an easy-to-use interface for managi
 
 ## 📝 Steps to Follow
 1. When you first open the desktop app, click on "Clear Data" to remove any previous data entries.
-![image](https://github.com/user-attachments/assets/68f2f318-2cf0-4b31-93cb-63fa366916b4)
+![image](https://github.com/user-attachments/assets/c21a7af9-8542-417f-974f-1361ea983bc7)
 
 2. Check the top title to know which shift you're working on (The shift type can be changed to "Morning shift pickup", "Night shift pickup", "Mid shift pickup", "Night shift drop").
-![image](https://github.com/user-attachments/assets/9257a014-1761-402d-9e92-2373a887ea24)
+![image](https://github.com/user-attachments/assets/cfb587a6-1cfa-4ad6-8c3a-e0858bc16613)
 
 3. The type of shift (Morning pickup/ Night shift pickup/ Mid shift drop/ Night shift drop) can be changed by using "Next Shift" or "Previous Shift".
    
