@@ -53,11 +53,12 @@ This Python and Tkinter application provides an easy-to-use interface for managi
 ![image](https://github.com/user-attachments/assets/7a6ee5ff-1ee0-4b4f-a923-2f8511ba32dc)
 
 8. Once you're done with adding people based on their shifts, click on "Save to Excel" to create an excel table with the transport order (This excel sheet will pop-up as soon as you hit "Save to Excel" (For any dialogue box that opens along with the excel sheet, just press on "okay")
-![image](https://github.com/user-attachments/assets/dae85f35-2a61-4ffe-8c7c-5cd03a9ae63d)
-![image](https://github.com/user-attachments/assets/a51c2a42-e5b7-4855-b12a-ac577090a259)
+![image](https://github.com/user-attachments/assets/15fe6ad6-1c0e-4fc4-adeb-46da3ebf943e)
 
 9. Use the temporarily created excel sheet to send out the transport order to the cab company. REFER BELOW TO SEE WHAT INFORMATION WILl BE ADDED AUTOMATICALLY.
-![image](https://github.com/user-attachments/assets/37e5bc13-0a47-412a-8d3f-1a9ecee0ad1c)
+
+![image](https://github.com/user-attachments/assets/acf4594f-cef1-4b17-a7d5-025314392f0f)
+
 
 
 > **⚠️ Important:** `Please read this section carefully before proceeding.`
