@@ -56,13 +56,16 @@ This Python and Tkinter application provides an easy-to-use interface for managi
 ![image](https://github.com/user-attachments/assets/15fe6ad6-1c0e-4fc4-adeb-46da3ebf943e)
 
 9. Use the temporarily created excel sheet to send out the transport order to the cab company. REFER BELOW TO SEE WHAT INFORMATION WILl BE ADDED AUTOMATICALLY.
-
+Marked in blue = Date, Prepared by, Total Cabs will be automatically added. 
+Marked in green = Route will be automatically added based on the name.
+Marked in yellow = No. of passengers will be automatically calculated based on how many passengers are there on the same route.
+Marked in red = vehicle type and time to arrive/leave will be automatically added based on the type of shift.
 ![image](https://github.com/user-attachments/assets/acf4594f-cef1-4b17-a7d5-025314392f0f)
-
 
 
 > **⚠️ Important:** `Please read this section carefully before proceeding.`
 
+Make sure that you have Microsoft Excel as an desktop application in your PC. 
 Based on the passenger's name, the route will be automatically added in front of their name.
 
 If there are two or more passengers with the same route, the program will add them to the same transport.
