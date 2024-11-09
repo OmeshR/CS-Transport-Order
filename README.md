@@ -56,7 +56,7 @@ This Python and Tkinter application provides an easy-to-use interface for managi
 ![image](https://github.com/user-attachments/assets/15fe6ad6-1c0e-4fc4-adeb-46da3ebf943e)
 
 9. Use the temporarily created excel sheet to send out the transport order to the cab company. REFER BELOW TO SEE WHAT INFORMATION WILl BE ADDED AUTOMATICALLY.
-10. 
+
 Marked in blue = Date, Prepared by, Total Cabs will be automatically added.
 
 Marked in green = Route will be automatically added based on the name.
@@ -67,11 +67,14 @@ Marked in red = vehicle type and time to arrive/leave will be automatically adde
 
 ![image](https://github.com/user-attachments/assets/acf4594f-cef1-4b17-a7d5-025314392f0f)
 
+10. Once the work is done and you're about to close the tool, click on "Clear Data" button one more time to remove all the data before the next session.
+
 
 > **⚠️ Important:** `Please read this section carefully before proceeding.`
 
 Make sure that you have Microsoft Excel as an desktop application in your PC.
 As you can see below, the default program for opening "Route" and "Uptime" is Microsoft Excel. Please make sure that in your newly acquired "Transportify version 11", these two files are also shown with an Microsoft Excel icon.
+
 ![image](https://github.com/user-attachments/assets/8b55713c-59d3-492d-8e98-25cc25633484)
  
 If you make a mistake adding passengers via the program, close the whole program and reopen a new session and start over with steps above. 
