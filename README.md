@@ -4,9 +4,6 @@ The Transport Order Automation Tool simplifies transport scheduling with a Pytho
 ## Project Overview
 This Python and Tkinter application provides an easy-to-use interface for managing transport orders by filling in a predefined Excel table with passenger names and corresponding routes. The tool minimizes manual input by 89%, reducing human error and making the process repeatable and efficient. This project includes features to handle multiple shifts, store inputted data, clear past entries, and export a printable version.
 
-## User Interface
-![image](https://github.com/user-attachments/assets/35ce59f7-066d-40ab-a955-36625fc30ce3)
-
 ## 🚀 How to Install
 1. When you're in the main page of the Github Repository, click on "Transportify version 11.7z" as shown below.
 ![image](https://github.com/user-attachments/assets/f05765eb-362f-4584-9573-12f80f587810)
@@ -32,11 +29,9 @@ This Python and Tkinter application provides an easy-to-use interface for managi
 8. Done! Now the program should open with it's user interface.
 ![image](https://github.com/user-attachments/assets/e633f169-1dbd-4cc3-9797-12ac86390bb9)
 
-
-
-
-
 > **💡 **Note**: This is an important reminder to follow the steps always.**
+
+
 
 ## 📝 Steps to Follow
 1. When you first open the desktop app, click on "Clear Data" to remove any previous data entries.
@@ -46,20 +41,18 @@ This Python and Tkinter application provides an easy-to-use interface for managi
 ![image](https://github.com/user-attachments/assets/cfb587a6-1cfa-4ad6-8c3a-e0858bc16613)
 
 3. The type of shift (Morning pickup/ Night shift pickup/ Mid shift drop/ Night shift drop) can be changed by using "Next Shift" or "Previous Shift".
-   
-![image](https://github.com/user-attachments/assets/7a76c33e-c30b-41d8-bf50-84a4f7a247e0)
-![image](https://github.com/user-attachments/assets/b80ecf0b-4794-4494-94e6-b3065b083170)
+![image](https://github.com/user-attachments/assets/e69fae71-d380-40b2-b338-35f9dcf42ed1)
 
 5. Add the passenger name based on the shift for that particular day (make sure to enter the name properly with no spelling errors, always start a name with a capital letter and only the first name should be typed).
-![image](https://github.com/user-attachments/assets/cc9bf1de-4734-4a42-afa4-b75e0d5da6fd)
+![image](https://github.com/user-attachments/assets/dbf1f8fa-ba7c-48f8-adae-704a6fa7ff89)
 
-6. Use the "Select Name" function to add the name of the person who's making the transport order.
-![image](https://github.com/user-attachments/assets/214f9b5a-11d8-4bbe-a165-b3c7e1c8335b)
+6. Use the "CS Name" function to add the name of the person who's making the transport order.
+![image](https://github.com/user-attachments/assets/265f15b9-166d-4632-a4da-d0f49c5d84aa)
 
-7. Then click on "Add Passenger" to include the person in that day's transport order (The added name will disappear).
-![image](https://github.com/user-attachments/assets/3ebe9002-1e31-49c9-8b47-507b0b4325fa)
+7. Then click on "Add Passenger" to include the person in that day's transport order (Once the name is added to the order, that very name will disappear).
+![image](https://github.com/user-attachments/assets/7a6ee5ff-1ee0-4b4f-a923-2f8511ba32dc)
 
-8. Once you're done with adding people based on their shifts, click on "Generate" to create an excel table with the transport order (This excel sheet will pop-up as soon as you hit "Generate" (For any dialogue box that opens along with the excel sheet, just press on "okay")
+8. Once you're done with adding people based on their shifts, click on "Save to Excel" to create an excel table with the transport order (This excel sheet will pop-up as soon as you hit "Save to Excel" (For any dialogue box that opens along with the excel sheet, just press on "okay")
 ![image](https://github.com/user-attachments/assets/dae85f35-2a61-4ffe-8c7c-5cd03a9ae63d)
 ![image](https://github.com/user-attachments/assets/a51c2a42-e5b7-4855-b12a-ac577090a259)
 
