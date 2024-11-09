@@ -52,7 +52,7 @@ This Python and Tkinter application provides an easy-to-use interface for managi
 7. Then click on "Add Passenger" to include the person in that day's transport order (Once the name is added to the order, that very name will disappear).
 ![image](https://github.com/user-attachments/assets/7a6ee5ff-1ee0-4b4f-a923-2f8511ba32dc)
 
-8. Once you're done with adding people based on their shifts, click on "Save to Excel" to create an excel table with the transport order (This excel sheet will pop-up as soon as you hit "Save to Excel" (For any dialogue box that opens along with the excel sheet, just press on "okay")
+8. Once you're done with adding people based on their shifts, click on "Save to Excel" to create an excel table with the transport order (This excel sheet will pop-up as soon as you hit "Save to Excel".
 ![image](https://github.com/user-attachments/assets/15fe6ad6-1c0e-4fc4-adeb-46da3ebf943e)
 
 9. Use the temporarily created excel sheet to send out the transport order to the cab company. REFER BELOW TO SEE WHAT INFORMATION WILl BE ADDED AUTOMATICALLY.
