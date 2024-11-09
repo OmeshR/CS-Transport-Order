@@ -17,7 +17,24 @@ This Python and Tkinter application provides an easy-to-use interface for managi
 3. Then click on "Download" button that shows up on the drop down menu.
 ![image](https://github.com/user-attachments/assets/c0528436-58bc-4bf4-848d-7b5506f3130d)
 
-4. 
+4. Right click on the downloaded file and click on "Extract all".
+![image](https://github.com/user-attachments/assets/b10d01b2-c1ca-41fc-92bd-bf038e8413a8)
+
+5. Then press on the "Extract" button on the dialogue box.
+![image](https://github.com/user-attachments/assets/8b9fda6e-3c18-4c8c-ab07-d1ed2a2bfeac)
+
+6. Go inside the extracted folder and when you're in the folder with 8 files, double click on the Transportify.exe file.
+![image](https://github.com/user-attachments/assets/46e105c9-bb4f-4728-b6e1-022340a64559)
+
+7. If a Windows smartscreen show up, click on the "More info" and click on "Run anyway".
+![image](https://github.com/user-attachments/assets/4608f906-f135-4a10-95bd-210ce95ab9ae)
+
+8. Done! Now the program should open with it's user interface.
+![image](https://github.com/user-attachments/assets/e633f169-1dbd-4cc3-9797-12ac86390bb9)
+
+
+
+
 
 
 
