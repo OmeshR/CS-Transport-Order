@@ -92,8 +92,9 @@ Based on the number of routes, the program will automatically calculate the "No.
 
 The name of the person who made the transport order can be selected before clicking on "Save to Excel" and that will be printed on the table too.
 
-> ** 📢 Special Notice:**
 
+> ** 📢 Special Notice:**
+`If the excel sheet does not automatically open after clicking on "Save to Excel", please check if the default program to open Uptime.xlsx is Microsoft Excel. If it still doesn't work, please manually open the Uptime.xlsx and your most recent entries to the excel table will be visible.` 
 
 
 
