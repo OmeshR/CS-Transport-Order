@@ -14,7 +14,7 @@ This Python and Tkinter application provides an easy-to-use interface for managi
 3. Then click on "Download" button that shows up on the drop down menu.
 ![image](https://github.com/user-attachments/assets/c0528436-58bc-4bf4-848d-7b5506f3130d)
 
-4. Right click on the downloaded file and click on "Extract all".
+4. Right click on the downloaded file and click on "Extract all" (You can use Winrar or &zip or any other extracting software too).
 ![image](https://github.com/user-attachments/assets/b10d01b2-c1ca-41fc-92bd-bf038e8413a8)
 
 5. Then press on the "Extract" button on the dialogue box.
@@ -70,7 +70,8 @@ Marked in red = vehicle type and time to arrive/leave will be automatically adde
 10. Once the work is done and you're about to close the tool, click on "Clear Data" button one more time to remove all the data before the next session.
 
 
-> **⚠️ Important:** `Please read this section carefully before proceeding.`
+## ⚠️ Important
+`Please read this section carefully before proceeding.`
 
 Make sure that you have Microsoft Excel as an desktop application in your PC.
 As you can see below, the default program for opening "Route" and "Uptime" is Microsoft Excel. Please make sure that in your newly acquired "Transportify version 11", these two files are also shown with an Microsoft Excel icon.
@@ -91,6 +92,7 @@ Based on the number of routes, the program will automatically calculate the "No.
 
 The name of the person who made the transport order can be selected before clicking on "Save to Excel" and that will be printed on the table too.
 
+> ** 📢 Special Notice:**
 
 
 
