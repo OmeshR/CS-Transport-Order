@@ -78,7 +78,7 @@ As you can see below, the default program for opening "Route" and "Uptime" is Mi
 
 ![image](https://github.com/user-attachments/assets/8b55713c-59d3-492d-8e98-25cc25633484)
  
-- If you make a mistake adding passengers via the program, close the whole program and reopen a new session and start over with steps above. 
+- If you make a mistake adding passengers via the program, click on "Clear Data", close the whole program and reopen a new session and start over with steps above. 
 
 - Based on the passenger's name, the route will be automatically added in front of their name.
 
