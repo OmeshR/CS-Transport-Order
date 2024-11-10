@@ -50,7 +50,7 @@ This Python and Tkinter application provides an easy-to-use interface for managi
 6. Use the "CS Name" function to add the name of the person who's making the transport order.
 ![image](https://github.com/user-attachments/assets/265f15b9-166d-4632-a4da-d0f49c5d84aa)
 
-7. For the "Night shift pickup", you can check the "don't need night shift drop" checkbox to not add the Night shift drop. But the Night shift pickup will be added to that passenger. This box should be checked before adding the passenger to the Nightshift pickup and should be unchecked when adding the next passenger to whateveer their shift is.
+7. For the "Night shift pickup", you can check the "don't need night shift drop" checkbox to not add the Night shift drop. But the Night shift pickup will be added to that passenger. This box should be checked before adding the passenger to the Nightshift pickup and should be unchecked when adding the next passenger to whatever their shift is.
 ![image](https://github.com/user-attachments/assets/aab094a8-991a-4250-9b2b-07eb816fdd92)
 
 8. Then click on "Add Passenger" to include the person in that day's transport order (Once the name is added to the order, that very name will disappear).
