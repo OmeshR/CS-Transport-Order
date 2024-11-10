@@ -1,4 +1,4 @@
-import tkinter as tk
+import tkinter as tk 
 from tkinter import messagebox, ttk
 from openpyxl import load_workbook
 from datetime import datetime, timedelta
@@ -6,16 +6,16 @@ import requests
 import os
 from PIL import Image, ImageTk
 
+
 script_dir = os.path.dirname(os.path.abspath(__file__))
-uptime_workbook_path = os.path.join(script_dir, "Uptime_Transport.xlsx")
+uptime_workbook_path = os.path.join(script_dir, "Uptime.xlsx")
 route_workbook_path = os.path.join(script_dir, "Route.xlsx")
-uptime_workbook = load_workbook(uptime_workbook_path)
-uptime_sheet = uptime_workbook.active
-
-route_workbook = load_workbook(route_workbook_path)
+def load_uptime_workbook():
+    return load_workbook(uptime_workbook_path)
+def load_route_workbook():
+    return load_workbook(route_workbook_path)
+route_workbook = load_route_workbook()
 route_sheet = route_workbook.active
-
-# Define cell locations for each section (adjust based on actual Excel structure)
 shift_sections = {
     "Morning shift pickup": {"start_row": 7, "start_col": 1, "time": "5.30am"},
     "Night shift pickup": {"start_row": 14, "start_col": 1, "time": "9.30pm"},
@@ -24,20 +24,19 @@ shift_sections = {
 }
 
 
+# Global variables
 current_shift = "Morning shift pickup"
 passenger_data = {"Morning shift pickup": [], "Night shift pickup": [], "Mid shift drop": [], "Night shift drop": []}
-
 def get_network_date():
     try:
         response = requests.get("http://worldtimeapi.org/api/timezone/Etc/UTC")
         if response.status_code == 200:
             network_date = datetime.fromisoformat(response.json()["datetime"]).date()
-            return network_date + timedelta(days=1)  # Get tomorrow's date
+            return network_date + timedelta(days=1)
         else:
             return datetime.now().date() + timedelta(days=1)
     except:
         return datetime.now().date() + timedelta(days=1)
-
 
 def get_route_from_name(name):
     for row in range(2, route_sheet.max_row + 1):
@@ -78,42 +77,38 @@ def add_passenger():
             passenger_data["Night shift drop"].append([route, [name]])
 
     name_entry.delete(0, tk.END)
-
 def next_shift():
     global current_shift
     shifts = list(shift_sections.keys())
     idx = shifts.index(current_shift)
     current_shift = shifts[(idx + 1) % len(shifts)]
     shift_label.config(text=f"Current Shift: {current_shift}")
-
 def previous_shift():
     global current_shift
     shifts = list(shift_sections.keys())
     idx = shifts.index(current_shift)
     current_shift = shifts[(idx - 1) % len(shifts)]
     shift_label.config(text=f"Current Shift: {current_shift}")
-
 def clear_data():
-    rows_to_clear = [
-        (7, 12),
-        (14, 18),
-        (20, 25),
-        (27, 32),
-    ]
+    uptime_workbook = load_uptime_workbook()
+    schedule_sheet = uptime_workbook["Transportation Schedule"]
+    rows_to_clear = [(7, 12), (14, 18), (20, 25), (27, 32)]
+    
     for start_row, end_row in rows_to_clear:
         for row in range(start_row, end_row + 1):
-            for col in range(1, 9):  # Columns 1 to 8
-                uptime_sheet.cell(row=row, column=col).value = None
+            for col in range(1, 9):
+                schedule_sheet.cell(row=row, column=col).value = None
     uptime_workbook.save(uptime_workbook_path)
-    messagebox.showinfo("Data Cleared", "Selected rows have been cleared from the table.")
-
+    messagebox.showinfo("Data Cleared", "Selected rows have been cleared from the 'Transportation Schedule' tab.")
 def save_to_excel():
+    uptime_workbook = load_uptime_workbook()
+    schedule_sheet = uptime_workbook["Transportation Schedule"]
     today_date = get_network_date()
-    uptime_sheet.merge_cells(start_row=1, start_column=7, end_row=1, end_column=8)
-    uptime_sheet.cell(row=1, column=7, value=today_date)
+    schedule_sheet.merge_cells(start_row=1, start_column=7, end_row=1, end_column=8)
+    schedule_sheet.cell(row=1, column=7, value=today_date)
     selected_name = name_var.get()
-    uptime_sheet.merge_cells(start_row=2, start_column=7, end_row=2, end_column=8)
-    uptime_sheet.cell(row=2, column=7, value=selected_name)
+    schedule_sheet.merge_cells(start_row=2, start_column=7, end_row=2, end_column=8)
+    schedule_sheet.cell(row=2, column=7, value=selected_name)
     route_count_total = 0
     for shift, data in passenger_data.items():
         section = shift_sections[shift]
@@ -121,34 +116,37 @@ def save_to_excel():
         col = section["start_col"]
         shift_time = section["time"]
         for route_name, passengers in data:
-            uptime_sheet.cell(row=row, column=col, value=route_name)
+            schedule_sheet.cell(row=row, column=col, value=route_name)
             for i, passenger in enumerate(passengers):
-                uptime_sheet.cell(row=row, column=col + 1 + i, value=passenger)
-            uptime_sheet.cell(row=row, column=col + 5, value=len(passengers))
-            uptime_sheet.cell(row=row, column=col + 6, value="Budget Car")
-            uptime_sheet.cell(row=row, column=col + 7, value=shift_time)
+                schedule_sheet.cell(row=row, column=col + 1 + i, value=passenger)
+            schedule_sheet.cell(row=row, column=col + 5, value=len(passengers))
+            schedule_sheet.cell(row=row, column=col + 6, value="Budget Car")
+            schedule_sheet.cell(row=row, column=col + 7, value=shift_time)
             route_count_total += 1
             row += 1
-    uptime_sheet.merge_cells(start_row=3, start_column=7, end_row=3, end_column=8)
-    uptime_sheet.cell(row=3, column=7, value=route_count_total)
+    schedule_sheet.merge_cells(start_row=3, start_column=7, end_row=3, end_column=8)
+    schedule_sheet.cell(row=3, column=7, value=route_count_total)
     uptime_workbook.save(uptime_workbook_path)
     os.startfile(uptime_workbook_path)
-    messagebox.showinfo("Excel Saved", "Data has been saved and the file is opened.")
+    
+
 
 # Tkinter
 root = tk.Tk()
 root.title("Passenger Roster Entry")
-root.resizable(False, False)  # Fixed window size
+root.resizable(False, False)
+
 gradient_canvas = tk.Canvas(root, width=600, height=500)
 gradient_canvas.pack(fill="both", expand=True)
-gradient_canvas.create_rectangle(0, 0, 600, 500, fill="#FFA500", outline="")
-gradient_canvas.create_rectangle(0, 0, 600, 250, fill="#FFD580", outline="")
+gradient_canvas.create_rectangle(0, 0, 600, 250, fill="#FFD580", outline="")  # lighter orange
+gradient_canvas.create_rectangle(0, 250, 600, 500, fill="#FFA500", outline="")  # darker orange
+
 logo_path = os.path.join(script_dir, "Uptime logo.png")
 logo_image = Image.open(logo_path)
-resized_logo = logo_image.resize((100, 100), Image.LANCZOS)
-logo = ImageTk.PhotoImage(logo_image)
-logo_label = tk.Label(root, image=logo, bg="#FFD580")
-logo_label.place(x=250, y=10)
+# Resize logo to a larger size
+resized_logo = logo_image.resize((600, 680), Image.LANCZOS)  # Adjusted size to 200x200
+logo = ImageTk.PhotoImage(resized_logo)
+gradient_canvas.create_image(330, 130, image=logo)  # Position adjusted to fit in the lower section
 shift_label = tk.Label(root, text=f"Current Shift: {current_shift}", font=("Arial", 14), bg="#FFD580")
 shift_label.place(x=50, y=130)
 name_label = tk.Label(root, text="Passenger Name:", bg="#FFA500")
@@ -163,19 +161,17 @@ name_dropdown.current(0)
 name_dropdown.place(x=180, y=220)
 night_drop_var = tk.BooleanVar()
 night_drop_checkbox = tk.Checkbutton(root, text="Don't need night shift drop", variable=night_drop_var, bg="#FFA500")
-night_drop_checkbox.place(x=180, y=250, width=200)  # Adding width for spacing
-
-
+night_drop_checkbox.place(x=180, y=250, width=200)
 add_button = tk.Button(root, text="Add Passenger", command=add_passenger)
 add_button.place(x=50, y=280)
 next_button = tk.Button(root, text="Next Shift", command=next_shift)
 next_button.place(x=180, y=280)
-prev_button = tk.Button(root, text="Previous Shift", command=previous_shift)
-prev_button.place(x=280, y=280)
+previous_button = tk.Button(root, text="Previous Shift", command=previous_shift)
+previous_button.place(x=300, y=280)
 save_button = tk.Button(root, text="Save to Excel", command=save_to_excel)
-save_button.place(x=50, y=330)
-clear_button = tk.Button(root, text="Clear Data", command=clear_data)
-clear_button.place(x=180, y=330)
+save_button.place(x=180, y=320)
 
+clear_button = tk.Button(root, text="Clear Data", command=clear_data)
+clear_button.place(x=300, y=320)
 
 root.mainloop()
