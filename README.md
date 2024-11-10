@@ -20,7 +20,7 @@ This Python and Tkinter application provides an easy-to-use interface for managi
 5. Then press on the "Extract" button on the dialogue box.
 ![image](https://github.com/user-attachments/assets/8b9fda6e-3c18-4c8c-ab07-d1ed2a2bfeac)
 
-6. Go inside the extracted folder and when you're in the folder with 8 files, double click on the Transportify.exe file.
+6. Go inside the extracted folder and when you're in the folder with multiple files, double click on the Transportify.exe file.
 ![image](https://github.com/user-attachments/assets/46e105c9-bb4f-4728-b6e1-022340a64559)
 
 7. If a Windows smartscreen show up, click on the "More info" and click on "Run anyway".
