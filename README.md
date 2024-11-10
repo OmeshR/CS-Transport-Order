@@ -73,24 +73,24 @@ Marked in red = vehicle type and time to arrive/leave will be automatically adde
 ## ⚠️ Important
 `Please read this section carefully before proceeding.`
 
-Make sure that you have Microsoft Excel as an desktop application in your PC.
+*Make sure that you have Microsoft Excel as an desktop application in your PC.
 As you can see below, the default program for opening "Route" and "Uptime" is Microsoft Excel. Please make sure that in your newly acquired "Transportify version 11", these two files are also shown with an Microsoft Excel icon.
 
 ![image](https://github.com/user-attachments/assets/8b55713c-59d3-492d-8e98-25cc25633484)
  
-If you make a mistake adding passengers via the program, close the whole program and reopen a new session and start over with steps above. 
+*If you make a mistake adding passengers via the program, close the whole program and reopen a new session and start over with steps above. 
 
-Based on the passenger's name, the route will be automatically added in front of their name.
+*Based on the passenger's name, the route will be automatically added in front of their name.
 
-If there are two or more passengers with the same route, the program will add them to the same transport.
+*If there are two or more passengers with the same route, the program will add them to the same transport.
 
-Based on the number of people in one route, the program will add either "1" or "2" or "3" to the "No. of Passengers" column.
+*Based on the number of people in one route, the program will add either "1" or "2" or "3" to the "No. of Passengers" column.
 
-Based on the day you're working on this, the date will be automatically added. The date will be added after adding +1 to today's date because the transport order is sent for tomorrow.Please keep your internet connection active when using the tool as it is needed to find the correct date. 
+*Based on the day you're working on this, the date will be automatically added. The date will be added after adding +1 to today's date because the transport order is sent for tomorrow.Please keep your internet connection active when using the tool as it is needed to find the correct date. 
 
-Based on the number of routes, the program will automatically calculate the "No. of cabs" and print the sum on the table.
+*Based on the number of routes, the program will automatically calculate the "No. of cabs" and print the sum on the table.
 
-The name of the person who made the transport order can be selected before clicking on "Save to Excel" and that will be printed on the table too.
+*The name of the person who made the transport order can be selected before clicking on "Save to Excel" and that will be printed on the table too.
 
 
 > ** 📢 Special Notice:**
