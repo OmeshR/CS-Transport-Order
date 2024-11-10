@@ -24,6 +24,7 @@ This Python and Tkinter application provides an easy-to-use interface for managi
 ![image](https://github.com/user-attachments/assets/46e105c9-bb4f-4728-b6e1-022340a64559)
 
 7. If a Windows smartscreen show up, click on the "More info" and click on "Run anyway".
+![image](https://github.com/user-attachments/assets/ce96e68a-69d8-4b03-93ae-9f1b6e5fa48a)
 ![image](https://github.com/user-attachments/assets/4608f906-f135-4a10-95bd-210ce95ab9ae)
 
 8. Done! Now the program should open with its user interface.
