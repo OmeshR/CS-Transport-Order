@@ -26,7 +26,7 @@ This Python and Tkinter application provides an easy-to-use interface for managi
 7. If a Windows smartscreen show up, click on the "More info" and click on "Run anyway".
 ![image](https://github.com/user-attachments/assets/4608f906-f135-4a10-95bd-210ce95ab9ae)
 
-8. Done! Now the program should open with it's user interface.
+8. Done! Now the program should open with its user interface.
 ![image](https://github.com/user-attachments/assets/e633f169-1dbd-4cc3-9797-12ac86390bb9)
 
 > **💡 **Note**: This is an important reminder to follow the steps always.**
