@@ -5,7 +5,7 @@ The Transport Order Automation Tool simplifies transport scheduling with a Pytho
 This Python and Tkinter application provides an easy-to-use interface for managing transport orders by filling in a predefined Excel table with passenger names and corresponding routes. The tool minimizes manual input by 89%, reducing human error and making the process repeatable and efficient. This project includes features to handle multiple shifts, store inputted data, clear past entries, and export a printable version.
 
 ## 🚀 How to Install
-1. When you're in the main page of the Github Repository, click on "Transportify version 11.7z" as shown below.
+1. When you're in the main page of the Github Repository, click on "Transportify version 11.7z" as shown below. (Please note that the final name is now called "Uptime Transport Order Generator.7z")
 ![image](https://github.com/user-attachments/assets/f05765eb-362f-4584-9573-12f80f587810)
 
 2. When you're inside the webpage, click on the 3 dots on the far right hand side.
